@@ -1,0 +1,245 @@
+
+/*---------------------------------------------------------------SECTION-1 CODE----------------------------------------------------------------------------------------*/
+
+*{
+
+    font-family: "Roboto", sans-serif;
+  
+  }
+
+
+  body{
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* .c-1
+  {
+    background-color: white;
+  } */
+  
+  #logo{
+    width: 120px;
+    display: flex;
+    margin-top: -35px;
+    margin-left: 2.5%;
+  }
+
+  .ico{
+    margin-right: 1.5%;
+  }
+  
+  .ico img{
+    width: 30px;
+    float: inline-end;
+    margin-right: 1%;
+    margin-top: -20px;
+  }
+  
+ 
+  #icon1{
+    width: 37px;
+    margin-top: -23px;
+  }
+  
+  #icon2{
+    width: 27px;
+    margin-top: -18px;
+  }
+  
+  
+  nav{
+    padding-top: 0.5%;
+  }
+  
+  nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+  
+   nav li {
+      
+      display:inline-block;
+      margin: 0.5%;
+      padding: 0.5% 1%;
+      border-radius: 4px;
+
+    }
+  
+   ul li a{
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: 500;
+  
+    }
+  
+    nav ul li:hover{
+      background-color:rgba(126, 126, 126, 0.405);
+      transition: 0.7s all;
+    
+    }
+  
+  
+  .bo{
+   padding-top: 26%;
+   text-align: center;
+  }
+  
+  button{
+    margin: 1%;
+    width: 16%;
+    padding: 0.8%;
+    border: none;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+ 
+   
+  
+/*  section{
+  
+    height: 100vh;
+    position: relative;
+  
+  }*/
+
+
+/*---------------------------------------------------------------Product-Page----------------------------------------------------------------------------------------*/
+  
+#ph
+{
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 4%;
+    margin-left: 2.5%;
+}
+  
+.PP
+{
+    background-color:#f4f4f4;
+    padding: 2%;
+    color:rgb(72, 71, 71) ;
+    font-weight: 500;
+}
+
+#R
+{
+    font-weight: 500;
+    color: rgb(72, 71, 71);
+    margin-bottom: 20px;
+
+}
+
+#pl2
+{
+    margin-top: -30px;
+    font-size: 13px;
+    font-weight: 500;
+    color:rgb(72, 71, 71);
+
+}
+
+.left
+{
+    width: 25%;
+    height: 100%;
+    margin-left: 1%;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+
+
+
+/*-------------------------Palates-----------------------------------*/
+.color-palette 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+
+}
+
+.color-box 
+{
+    width:40px;
+    height:40px;
+    
+    border-radius: 100%;
+    background-color: #f00;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .white {
+    background: linear-gradient(to right, white 0%, #c0c0c0 100%);
+  }
+  
+  .black {
+    background: linear-gradient(to right, black 0%, #3d3d3d 100%);
+  }
+  
+  .blue {
+    background: linear-gradient(to right, #007bff 0%, #003369 100%);
+  }
+  
+  .red {
+    background: linear-gradient(to right, #dc3545 0%, #830913 100%);
+  }
+  
+  .gray {
+    background: linear-gradient(to right, #4e565d 0%, #3d4653 100%);
+  }
+
+
+
+.PP h2{
+    font-weight: 500;
+    font-size: medium;
+}
+
+.PP h1{
+    font-size: medium;
+
+}
+
+#zipcode
+{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 70%;
+}
+
+#search
+{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top:10px; 
+    width: 70%;
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+  width: 22px; 
+  height: 22px;
+
+}
+
+#search::placeholder{
+    font-size: 16px;
+}
+#zipcode::placeholder{
+    font-size: 16px;
+}
