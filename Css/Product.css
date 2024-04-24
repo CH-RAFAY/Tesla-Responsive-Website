@@ -283,7 +283,7 @@ input[type="radio"]{
   border: 1px solid #ddd;
   border-radius: 5px;
   margin: 10px;
-  width: 15%;
+  width: 48%;
   box-sizing: border-box;
 }
 
@@ -293,13 +293,14 @@ input[type="radio"]{
   border-bottom: 1px solid #ddd;
 }
 
-.Pheader h1 {
+.Pheader h2 {
   margin: 0;
   padding: 0;
 }
 
-.Pbody {
-  padding: 10px;
+.Pbody img {
+  width: 50px;
+  
 }
 
 .Pfooter {
