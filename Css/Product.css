@@ -157,7 +157,10 @@
 
 
 
-
+.other{
+  background-color: #f4f4f4;
+  padding-top: 50px;
+}
 
 /*-------------------------Palates-----------------------------------*/
 .color-palette 
@@ -267,6 +270,7 @@ input[type="radio"]{
   justify-content: space-between;
   width: 70%;
   margin: 0 auto;
+  
 }
 
 .Pcontainer
@@ -276,22 +280,25 @@ input[type="radio"]{
   justify-content: space-between;
   width: 70%;
   margin: 0 auto;
+  
+
 }
 
 .Plist {
-  background-color: #dedede;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: solid 1px white;
   margin: 10px;
   width: 48%;
-  height: 50vh;
   box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
 }
 
 .Pheader{
-  background-color: #ddd;
+  background-color: #ffffff;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+
 }
 
 .Pheader h2 {
@@ -299,15 +306,15 @@ input[type="radio"]{
   padding: 0;
 }
 
-.Pbody img {
-  width: 50px;
-  
+.Pbody img
+{
+  width: 400px;
+
 }
 
 .Pfooter {
   text-align: center;
   padding: 10px;
-  border-top: 1px solid #ddd;
   background-color: rgb(98, 161, 212);
 }
 
