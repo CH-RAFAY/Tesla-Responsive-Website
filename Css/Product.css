@@ -121,9 +121,10 @@
 .PP
 {
     background-color:#f4f4f4;
-    padding: 2%;
+    padding-left: 30px;
     color:rgb(72, 71, 71) ;
     font-weight: 500;
+    display: flex;
 }
 
 #R
@@ -145,7 +146,7 @@
 
 .left
 {
-    width: 25%;
+    
     height: 100%;
     margin-left: 1%;
     font-size: 16px;
@@ -156,13 +157,15 @@
 
 
 
+
+
 /*-------------------------Palates-----------------------------------*/
 .color-palette 
 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 70%;
+    width: 90%;
 
 }
 
@@ -208,8 +211,9 @@
     font-size: medium;
 }
 
-.PP h1{
-    font-size: medium;
+#coh{
+    
+    margin-left: -30px;
 
 }
 
@@ -243,3 +247,67 @@ input[type="radio"]{
 #zipcode::placeholder{
     font-size: 16px;
 }
+
+.bhalf {
+  width: 20%;
+  height: 100vh;
+  background-color: #f4f4f4;
+  color: aliceblue;
+  float: left; 
+  height: 100vh;
+}
+
+
+
+/*------------------------------------------------------------Product Portion---------------------------------------------------------------------*/
+
+.Co {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.Pcontainer
+{
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.Plist {
+  background-color: #dedede;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  width: 15%;
+  box-sizing: border-box;
+}
+
+.Pheader{
+  background-color: #ddd;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.Pheader h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.Pbody {
+  padding: 10px;
+}
+
+.Pfooter {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: rgb(98, 161, 212);
+}
+
+
+
