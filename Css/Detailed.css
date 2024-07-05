@@ -102,10 +102,9 @@
 
 .section-1
 {
-    display: inline-block;
     float: left;
     max-width: 70%;
-    margin-top: 10%;
+    margin-top: 5%;
     height: 100vh;
 }
 
