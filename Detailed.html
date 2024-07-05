@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imgs\T.png">
+    <link rel="stylesheet" type="text/css" href="Css\Detailed.css">
+    <title>Tesla | Detailed </title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                
+                    
+                    <li><a href="">Vehicle</a></li>
+                    <li><a href="">Energy</a></li>
+                    <li><a href="">Charging</a></li>
+                    <li><a href="">Discover</a></li>
+                    <li><a href="">Shop</a></li>  
+                    
+    
+                <img src="Icon\T Black.png" id="logo"> 
+                
+                <div class="ico">
+                    <img src="Icon\HB.png" alt="" id="icon1">
+                    <img src="Icon\WB.png" alt="" id="icon2">
+                    <img src="Icon\AB.png" alt="" id="icon3">
+                </div>
+            
+            </ul>
+        </nav>
+    </header>
+
+    
+    <div class="section-1">
+
+        <div class="imgsc">
+            <img src="imgs\Cars Product\compositor.jpeg" alt="">
+        </div>
+
+    </div>
+
+
+
+    <section class="car-details">
+        <h2>Model 3</h2>
+        <div class="specs">
+            <div>
+                <strong>341</strong> mi<br>
+                Range (EPA est.)
+            </div>
+            <div>
+                <strong>125</strong> mph<br>
+                Top Speed
+            </div>
+            <div>
+                <strong>4.2</strong> sec<br>
+                0-60 mph
+            </div>
+        </div>
+        <div class="purchase-options">
+            <div class="active">Cash</div>
+            <div>Lease</div>
+            <div>Finance</div>
+        </div>
+        <div class="toggle-section">
+            Include $7,500 Federal Tax Credit and est. 5-year gas savings of $5,000.
+            <label class="toggle-switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="price-options">
+            <div>Rear-Wheel Drive - $33,990</div>
+            <div class="selected">Long Range All-Wheel Drive - $34,990</div>
+            <div>Performance All-Wheel Drive - $42,490</div>
+        </div>
+        <button class="feature-details">Feature Details</button>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script>
+        document.querySelectorAll('.purchase-options div').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.purchase-options div').forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.price-options div').forEach(price => {
+            price.addEventListener('click', function() {
+                document.querySelectorAll('.price-options div').forEach(pr => pr.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+    </script>
+
+
+
+</body>

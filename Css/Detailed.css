@@ -1,0 +1,273 @@
+
+*{
+
+    font-family: "Roboto", sans-serif;
+  
+  }
+
+
+  body{
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* .c-1
+  {
+    background-color: white;
+  } */
+  
+  #logo{
+    width: 120px;
+    display: flex;
+    margin-top: -35px;
+    margin-left: 2.5%;
+  }
+
+  .ico{
+    margin-right: 1.5%;
+  }
+  
+  .ico img{
+    width: 30px;
+    float: inline-end;
+    margin-right: 1%;
+    margin-top: -20px;
+  }
+  
+ 
+  #icon1{
+    width: 37px;
+    margin-top: -23px;
+  }
+  
+  #icon2{
+    width: 27px;
+    margin-top: -18px;
+  }
+  
+  
+  nav{
+    padding-top: 0.5%;
+  }
+  
+  nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+  
+   nav li {
+      
+      display:inline-block;
+      margin: 0.5%;
+      padding: 0.5% 1%;
+      border-radius: 4px;
+
+    }
+  
+   ul li a{
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: 500;
+  
+    }
+  
+    nav ul li:hover{
+      background-color:rgba(126, 126, 126, 0.405);
+      transition: 0.7s all;
+    
+    }
+  
+  
+  .bo{
+   padding-top: 26%;
+   text-align: center;
+  }
+  
+  button{
+    margin: 1%;
+    width: 16%;
+    padding: 0.8%;
+    border: none;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+ 
+   
+
+  /* Section-1 ------------------ */
+
+.section-1
+{
+    display: inline-block;
+    float: left;
+    max-width: 70%;
+    margin-top: 10%;
+    height: 100vh;
+}
+
+.imgsc
+{
+margin: 10%;
+}
+
+.imgsc img
+{
+  width: 100%;
+
+}
+
+
+
+
+
+
+
+
+/* Specified Section */
+
+.car-details {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 3%;
+
+}
+
+.car-details h2 {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.car-details .specs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.car-details .specs div {
+  font-size: 16px;
+}
+
+.purchase-options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.purchase-options div {
+  margin: 0 30px;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+}
+
+.purchase-options div::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.purchase-options div.active::after {
+  transform: scaleX(1);
+}
+
+.price-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.price-options div {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.price-options div.selected {
+  background-color: #ffffff;
+  border: 3px solid #007bff ;
+  font-weight: bold;
+}
+
+.feature-details {
+  background-color: #e7e7e7;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.feature-details:hover {
+  background-color: #ccc;
+}
+
+.toggle-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.toggle-switch {
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
