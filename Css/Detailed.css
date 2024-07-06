@@ -20,30 +20,33 @@
   #logo{
     width: 120px;
     display: flex;
-    margin-top: -35px;
-    margin-left: 2.5%;
+ 
+    margin: 2.5%;
+
+
   }
 
   .ico{
     margin-right: 1.5%;
+    margin-top: -30px;
   }
   
   .ico img{
     width: 30px;
     float: inline-end;
     margin-right: 1%;
-    margin-top: -20px;
+    margin-top: -2.0%;
   }
   
  
   #icon1{
     width: 37px;
-    margin-top: -23px;
+    margin-top: -2.3%;
   }
   
   #icon2{
     width: 27px;
-    margin-top: -18px;
+    margin-top: -1.8%;
   }
   
   
@@ -56,6 +59,7 @@
       margin: 0;
       padding: 0;
       text-align: center;
+
     }
   
    nav li {
@@ -64,6 +68,7 @@
       margin: 0.5%;
       padding: 0.5% 1%;
       border-radius: 4px;
+            display: none;
 
     }
   
