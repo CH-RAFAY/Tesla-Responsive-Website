@@ -15,32 +15,28 @@
 <body>
 
 
-        <header>
-        <nav>
+  <header>
+    <nav>
+        <div class="nav-container">
+            <img src="Icon\T Black.png" id="logo">
             <ul>
-                
-                    
-                    <li><a href="">Vehicle</a></li>
-                    <li><a href="">Energy</a></li>
-                    <li><a href="">Charging</a></li>
-                    <li><a href="">Discover</a></li>
-                    <li><a href="">Shop</a></li>
-                    
-    
-                <img src="Icon\T Black.png" id="logo"> 
-                
-                <div class="ico">
-                    <img src="Icon\HB.png" alt="" id="icon1">
-                    <img src="Icon\WB.png" alt="" id="icon2">
-                    <img src="Icon\AB.png" alt="" id="icon3">
-                </div>
-            
+                <li><a href="">Vehicle</a></li>
+                <li><a href="">Energy</a></li>
+                <li><a href="">Charging</a></li>
+                <li><a href="">Discover</a></li>
+                <li><a href="">Shop</a></li>
             </ul>
-        </nav>
-    </header>
+            <div class="ico">
+                <img src="Icon\HB.png" alt="" id="icon1">
+                <img src="Icon\WB.png" alt="" id="icon2">
+                <img src="Icon\AB.png" alt="" id="icon3">
+            </div>
+        </div>
+    </nav>
+</header>
 
 
-   
+
 
     <h1 id="ph">Inventory</h1>
 
@@ -212,7 +208,38 @@
 
 
 
+    <script>
 
+      let lastScrollTop = 0;
+      let isScrolling;
+      const header = document.querySelector('header');
+      const headerHeight = header.offsetHeight;
+      
+      window.addEventListener('scroll', function() {
+          let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          
+          if (scrollTop > lastScrollTop) {
+        
+              header.style.top = `-${headerHeight}px`;
+              header.classList.remove('scrolling', 'static');
+          } else {
+      
+              header.style.top = '0';
+              header.classList.add('scrolling');
+              header.classList.remove('static');
+          }
+          
+          lastScrollTop = Math.max(scrollTop, 0);
+          clearTimeout(isScrolling);
+      
+          isScrolling = setTimeout(function() {
+      
+              header.classList.remove('scrolling');
+              header.classList.add('static');
+          }, 200); 
+      });
+      </script>
+      
 
 
 </div>

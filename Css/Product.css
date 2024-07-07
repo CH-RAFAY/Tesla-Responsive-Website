@@ -1,86 +1,100 @@
 
 /*---------------------------------------------------------------SECTION-1 CODE----------------------------------------------------------------------------------------*/
 
-*{
+* {
+  font-family: "Roboto", sans-serif;
+}
 
-    font-family: "Roboto", sans-serif;
-  
-  }
+body {
+  margin: 0;
+  padding: 0;
 
+}
 
-  body{
-    margin: 0;
-    padding: 0;
-  }
+#logo {
+  width: 120px;
+  margin: 0 20px;
+}
 
+.ico {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 2%;
+}
 
-  /* .c-1
-  {
-    background-color: white;
-  } */
-  
-  #logo{
-    width: 120px;
-    display: flex;
-    margin-top: -35px;
-    margin-left: 2.5%;
-  }
+.ico img {
+  width: 30px;
+  margin-right: 10px;
+}
 
-  .ico{
-    margin-right: 1.5%;
-  }
-  
-  .ico img{
-    width: 30px;
-    float: inline-end;
-    margin-right: 1%;
-    margin-top: -20px;
-  }
-  
- 
-  #icon1{
-    width: 37px;
-    margin-top: -23px;
-  }
-  
-  #icon2{
-    width: 27px;
-    margin-top: -18px;
-  }
-  
-  
-  nav{
-    padding-top: 0.5%;
-  }
-  
-  nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-  
-   nav li {
-      
-      display:inline-block;
-      margin: 0.5%;
-      padding: 0.5% 1%;
-      border-radius: 4px;
+#icon1 {
+  width: 37px;
+}
 
-    }
-  
-   ul li a{
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-      font-weight: 500;
-  
-    }
-  
-    nav ul li:hover{
-      background-color:rgba(126, 126, 126, 0.405);
-      transition: 0.7s all;
-    
-    }
+#icon2 {
+  width: 27px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 0.3s, background-color 0.9s;
+  z-index: 1000;
+}
+
+header.scrolling {
+  background-color: rgba(213, 213, 213, 0.9); /* Adjust opacity as needed */
+}
+
+header.static {
+  background-color: transparent;
+}
+
+nav {
+  padding-top: 0.5%;
+  position: relative;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+
+nav ul li:hover {
+  background-color: rgba(126, 126, 126, 0.405);
+  transition: 0.7s all;
+  padding: 6px 15px;
+  border-radius: 5px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+  width: 100%;
+}
+
   
   
   .bo{

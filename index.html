@@ -189,27 +189,24 @@ window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
     if (scrollTop > lastScrollTop) {
-        // Scrolling down
+  
         header.style.top = `-${headerHeight}px`;
         header.classList.remove('scrolling', 'static');
     } else {
-        // Scrolling up
+
         header.style.top = '0';
         header.classList.add('scrolling');
         header.classList.remove('static');
     }
     
     lastScrollTop = Math.max(scrollTop, 0);
-
-    // Clear the existing timeout
     clearTimeout(isScrolling);
 
-    // Set a timeout to run after scrolling ends
     isScrolling = setTimeout(function() {
-        // Run after scrolling ends
+
         header.classList.remove('scrolling');
         header.classList.add('static');
-    }, 100); // Adjust timeout as needed
+    }, 200); 
 });
 </script>
 
