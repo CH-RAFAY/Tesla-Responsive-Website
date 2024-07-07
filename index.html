@@ -42,7 +42,7 @@
 
     <video autoplay loop muted playsinline class="bg-v "><source src="Video\T Official.mp4" type="video/mp4"></video>
 
-
+<div class="portion">
     <div class="home">
 
         <p id="Y">Model Y</p>
@@ -62,7 +62,7 @@
         <p id="lp">*Price before incentives and savings is $42,990, excluding taxes and fees. Subject to change.</p><br>
         <a href=""><p id="ll"><u>Learn about est. gas savings.</u></p></a>
     </div>
-
+</div>
 </section>
 
 
@@ -71,29 +71,11 @@
 
 <section class="two">
 
-    <header id="no">
-        <nav id="no">
-            <div class="nav-container">
-                <img src="Icon\T Grey.png" id="logo">
-                <ul>
-                    <li><a href="">Vehicle</a></li>
-                    <li><a href="">Energy</a></li>
-                    <li><a href="">Charging</a></li>
-                    <li><a href="">Discover</a></li>
-                    <li><a href="">Shop</a></li>
-                </ul>
-                <div class="ico">
-                    <img src="Icon\HW.png" alt="" id="icon1">
-                    <img src="Icon\WW.png" alt="" id="icon2">
-                    <img src="Icon\AW.png" alt="" id="icon3">
-                </div>
-            </div>
-        </nav>
-    </header>
+
     
         <img class="bg-v" src="imgs\Red F.jpg" alt="Tesla Image"> 
     
-    
+        <div class="portion"> 
         <div class="home">
             
             <p id="Y">Model Y</p>
@@ -117,36 +99,18 @@
             <a href=""><p id="ll"><u>Learn about est. gas savings.</u></p></a>
             
         </div>
-
+    </div>
 </section>
 
 <!---------------------------------------------------------------------SECTION-THREE---------------------------------------------------------------------------------->
 
 <section class="three">
 
-    <header id="no">
-        <nav id="no">
-            <div class="nav-container">
-                <img src="Icon\T Grey.png" id="logo">
-                <ul>
-                    <li><a href="">Vehicle</a></li>
-                    <li><a href="">Energy</a></li>
-                    <li><a href="">Charging</a></li>
-                    <li><a href="">Discover</a></li>
-                    <li><a href="">Shop</a></li>
-                </ul>
-                <div class="ico">
-                    <img src="Icon\HW.png" alt="" id="icon1">
-                    <img src="Icon\WW.png" alt="" id="icon2">
-                    <img src="Icon\AW.png" alt="" id="icon3">
-                </div>
-            </div>
-        </nav>
-    </header>
+
     
     <video autoplay loop muted playsinline class="bg-v "><source src="Video\Tesla Tyre.mp4" type="video/mp4"></video>
     
-    
+    <div class="portion"> 
         <div class="home">
             
             <p id="Y">Model Y</p>
@@ -170,6 +134,7 @@
             <a href=""><p id="ll"><u>Learn about est. gas savings.</u></p></a>
             
         </div>
+    </div>
 
 </section>
 
@@ -180,29 +145,10 @@
 <section class="four">
 
 
-    <header id="no">
-        <nav id="no">
-            <div class="nav-container">
-                <img src="Icon\T Grey.png" id="logo">
-                <ul>
-                    <li><a href="">Vehicle</a></li>
-                    <li><a href="">Energy</a></li>
-                    <li><a href="">Charging</a></li>
-                    <li><a href="">Discover</a></li>
-                    <li><a href="">Shop</a></li>
-                </ul>
-                <div class="ico">
-                    <img src="Icon\HW.png" alt="" id="icon1">
-                    <img src="Icon\WW.png" alt="" id="icon2">
-                    <img src="Icon\AW.png" alt="" id="icon3">
-                </div>
-            </div>
-        </nav>
-    </header>
     
     <img class="bg-v" src="imgs\Cyber Truck.jpg" alt="Tesla Image"> 
     
-    
+     <div class="portion">    
         <div class="home">
             
             <p id="Y">Model Y</p>
@@ -226,27 +172,45 @@
             <a href=""><p id="ll"><u>Learn about est. gas savings.</u></p></a>
             
         </div>
+    </div>
 
 </section>
 
 
 
 <script>
-    let lastScrollTop = 0;
+
+let lastScrollTop = 0;
+let isScrolling;
 const header = document.querySelector('header');
+const headerHeight = header.offsetHeight;
 
 window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
     if (scrollTop > lastScrollTop) {
-
-        header.style.top = '-80px'; 
+        // Scrolling down
+        header.style.top = `-${headerHeight}px`;
+        header.classList.remove('scrolling', 'static');
     } else {
-
+        // Scrolling up
         header.style.top = '0';
+        header.classList.add('scrolling');
+        header.classList.remove('static');
     }
-    lastScrollTop = scrollTop;
-});
+    
+    lastScrollTop = Math.max(scrollTop, 0);
 
+    // Clear the existing timeout
+    clearTimeout(isScrolling);
+
+    // Set a timeout to run after scrolling ends
+    isScrolling = setTimeout(function() {
+        // Run after scrolling ends
+        header.classList.remove('scrolling');
+        header.classList.add('static');
+    }, 100); // Adjust timeout as needed
+});
 </script>
 
 
