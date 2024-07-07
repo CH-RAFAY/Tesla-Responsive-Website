@@ -40,12 +40,12 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  transition: top 0.3s, background-color 0.3s;
+  transition: top 0.3s, background-color 0.9s;
   z-index: 1000;
 }
 
 header.scrolling {
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  background-color: rgba(0, 0, 0, 0.9); /* Adjust opacity as needed */
 }
 
 header.static {
