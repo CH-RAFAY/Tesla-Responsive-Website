@@ -1,73 +1,88 @@
 
 /*---------------------------------------------------------------SECTION-1 CODE----------------------------------------------------------------------------------------*/
-
-*{
-
+* {
   font-family: "Roboto", sans-serif;
-
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
 }
 
-#logo{
+#logo {
   width: 120px;
+  margin: 0 20px;
+}
+
+.ico {
   display: flex;
-  margin-top: -35px;
-  margin-left: 30px;
+  align-items: center;
+  margin-left: auto;
 }
 
-.ico img{
+.ico img {
   width: 30px;
-  float: inline-end;
-  margin-right: 1%;
-  margin-top: -23px;
+  margin-right: 10px;
 }
 
-#icon1{
+#icon1 {
   width: 37px;
-  margin-top: -27px;
 }
 
-#icon2{
+#icon2 {
   width: 27px;
-  margin-top: -21px;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: top 0.3s;
+  z-index: 1000;
+}
 
-nav{
+nav {
   padding-top: 0.5%;
+  position: relative;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
- nav li {
-    
-    display:inline-block;
-    margin: 0.5%;
-    padding: 0.5% 1%;
-    border-radius: 4px;
-  }
+nav li {
+  margin: 0 10px;
+}
 
- ul li a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: 500;
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
 
-  }
+nav ul li:hover {
+  background-color: rgba(126, 126, 126, 0.405);
+  transition: 0.7s all;
+}
 
-  nav ul li:hover{
-    background-color:rgba(126, 126, 126, 0.405);
-    transition: 0.7s all;
-  
-  }
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+  width: 100%;
+}
+
+
 
 .BGV{
   position: absolute;
@@ -75,6 +90,7 @@ nav ul {
   bottom: 0;
   z-index: -1;
   }
+
 
   video{
     filter: grayscale(20%);
@@ -151,6 +167,12 @@ button{
   margin-top: -20px;
   text-decoration: none;
   
+
+}
+
+#no
+{
+  visibility: hidden;
 
 }
 
