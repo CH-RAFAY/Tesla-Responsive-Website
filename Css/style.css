@@ -9,6 +9,11 @@ body {
   padding: 0;
 
 }
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
 #logo {
   width: 120px;
@@ -92,6 +97,56 @@ nav ul li:hover {
   padding: 0 20px;
   position: relative;
   width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  color: white;
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+  nav ul {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding-top: 60px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+  }
+
+  nav ul.active {
+      display: flex;
+      transform: translateX(0);
+  }
+
+  nav ul li {
+      margin: 20px 0;
+  }
+
+  .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 20px;
+  }
+
+  
+  .ico img, #icon1, #icon2 {
+    display: none;
+  }
+  
+
+
+
 }
 
 
