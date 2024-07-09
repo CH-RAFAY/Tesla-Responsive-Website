@@ -14,31 +14,31 @@
 
 <body>
 
-
+  <button class="filter-toggle">Filter</button>
   <section class="one">
     <header>
-        <nav>
-            <div class="nav-container">
-                <img src="Icon\T Black.png" id="logo">
-                <button class="menu-toggle" id="menu-toggle">
-                    <span class="material-icons">menu</span>
-                </button>
-                <ul id="nav-menu">
-                    <li><a href="">Vehicle</a></li>
-                    <li><a href="">Energy</a></li>
-                    <li><a href="">Charging</a></li>
-                    <li><a href="">Discover</a></li>
-                    <li><a href="">Shop</a></li>
-                </ul>
-                <div class="ico">
-                    <img src="Icon\HB.png" alt="" id="icon1">
-                    <img src="Icon\WB.png" alt="" id="icon2">
-                    <img src="Icon\AB.png" alt="" id="icon3">
-                </div>
-            </div>
-        </nav>
-    </header>
+      <nav>
+          <div class="nav-container">
+              <img src="Icon\T Black.png" id="logo">
+              <ul id="nav-menu">
+                  <li><a href="">Vehicle</a></li>
+                  <li><a href="">Energy</a></li>
+                  <li><a href="">Charging</a></li>
+                  <li><a href="">Discover</a></li>
+                  <li><a href="">Shop</a></li>
+              </ul>
+              <div class="ico">
+                  <img src="Icon\HB.png" alt="" id="icon1">
+                  <img src="Icon\WB.png" alt="" id="icon2">
+                  <img src="Icon\AB.png" alt="" id="icon3">
+              </div>
+              <button class="menu-toggle" id="menu-toggle">
+                  <span class="material-icons">menu</span>
+              </button>
 
+          </div>
+      </nav>
+  </header>
 
 
 
@@ -247,6 +247,30 @@
 
       <script src="Javascript\toggle.js"></script>
 
+
 </div>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const filterToggle = document.querySelector('.filter-toggle');
+      const bhalf = document.querySelector('.bhalf');
+      const header = document.querySelector('header');
+
+      filterToggle.addEventListener('click', function() {
+          bhalf.classList.toggle('active');
+      });
+
+      window.addEventListener('scroll', function() {
+          if (window.pageYOffset > header.offsetHeight) {
+              filterToggle.classList.add('visible');
+          } else {
+              filterToggle.classList.remove('visible');
+          }
+      });
+  });
+</script>
+
 </body>
 </html>
