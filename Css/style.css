@@ -17,7 +17,7 @@ body {
 
 #logo {
   width: 120px;
-  margin: 0 20px;
+  margin: 1%;
 }
 
 .ico {
@@ -83,7 +83,7 @@ nav ul li a {
   font-weight: 500;
 }
 
-nav ul li:hover {
+nav ul li:hover,.menu-toggle:hover{
   background-color: rgba(126, 126, 126, 0.405);
   transition: 0.7s all;
   padding: 6px 15px;
@@ -124,6 +124,7 @@ nav ul li:hover {
       transition: transform 0.3s ease-in-out;
   }
 
+
   nav ul.active {
       display: flex;
       transform: translateX(0);
@@ -136,13 +137,20 @@ nav ul li:hover {
   .menu-toggle {
       display: block;
       position: absolute;
-      right: 20px;
+      right: 3%;
+      font-size: 20px;
+      margin-right: 3%;
+      width: 10%;
+
   }
+
+
 
   
   .ico img, #icon1, #icon2 {
     display: none;
   }
+
   
 
 
@@ -175,7 +183,6 @@ nav ul li:hover {
   {
     font-size: 45px;
     font-weight: 500;
-    margin-top:70px
 
   }
 
@@ -240,7 +247,8 @@ button{
 
 .portion
 {
-  margin-top: 8%;
+
+  padding: 5%;
 }
 
 
@@ -262,4 +270,138 @@ section{
   height: 100%;
   object-fit: cover;
   z-index: -1;
+}
+
+
+
+
+/* Tablet Devices */
+@media (max-width: 1024px) {
+  .bo {
+    padding-top: 40%;
+  }
+
+  button {
+    width: 30%;
+    padding: 1.2%;
+  }
+
+  #Y {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+
+  #Pr {
+    font-size: 20px;
+  }
+
+  #L {
+    font-size: 13px;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 5%;
+    font-size: 20px;
+    width: 15%;
+
+}
+
+
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .portion {
+    margin-top: 20%;
+  }
+
+  .bo {
+    padding-top: 40%;
+  }
+
+  button {
+    width: 70%;
+    padding: 2%;
+    margin: 2% 0;
+  }
+
+  #Y {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  #Pr {
+    font-size: 18px;
+  }
+
+  #L {
+    font-size: 12px;
+  }
+
+  #lp, #ll {
+    font-size: 12px;
+  }
+
+  .nav-container {
+    padding: 0 10px;
+    margin: 2%;
+
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 10%;
+    font-size: 20px;
+    width: 20%;
+
+}
+
+
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .portion {
+    margin-top: 25%;
+  }
+
+  .bo {
+    padding-top: 70%;
+  }
+
+  button {
+    width: 90%;
+    padding: 4%;
+  }
+
+  #Y {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+
+  #Pr {
+    font-size: 16px;
+  }
+
+  #L {
+    font-size: 11px;
+  }
+
+  #lp, #ll {
+    font-size: 11px;
+  }
+
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 10%;
+    font-size: 20px;
+    width: 25%;
+
+}
+
 }

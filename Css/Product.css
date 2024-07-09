@@ -1,6 +1,5 @@
 
 /*---------------------------------------------------------------SECTION-1 CODE----------------------------------------------------------------------------------------*/
-
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -10,10 +9,15 @@ body {
   padding: 0;
 
 }
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
 #logo {
   width: 120px;
-  margin: 0 20px;
+  margin: 1%;
 }
 
 .ico {
@@ -46,7 +50,7 @@ header {
 }
 
 header.scrolling {
-  background-color: rgba(213, 213, 213, 0.9); /* Adjust opacity as needed */
+  background-color: rgba(0, 0, 0, 0.9); /* Adjust opacity as needed */
 }
 
 header.static {
@@ -79,7 +83,7 @@ nav ul li a {
   font-weight: 500;
 }
 
-nav ul li:hover {
+nav ul li:hover,.menu-toggle:hover{
   background-color: rgba(126, 126, 126, 0.405);
   transition: 0.7s all;
   padding: 6px 15px;
@@ -90,12 +94,76 @@ nav ul li:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 1.5%;
   position: relative;
   width: 100%;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  color: rgb(0, 0, 0);
+}
+
+
+/* Media queries */
+@media (max-width: 1200px) {
+  nav ul {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding-top: 60px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+  }
+
+
+  nav ul.active {
+      display: flex;
+      transform: translateX(0);
+  }
+
+  nav ul li {
+      margin: 20px 0;
+  }
+
+  .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 3%;
+      font-size: 20px;
+      margin-right: 3%;
+      width: 10%;
+
+  }
+
+
+
   
+  .ico img, #icon1, #icon2 {
+    display: none;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+  }
+
+
+
+}
+
+
+
   
   .bo{
    padding-top: 26%;
@@ -128,7 +196,7 @@ nav ul li:hover {
 {
     font-size: 40px;
     font-weight: 500;
-    margin-top: 4%;
+    margin-top: 8%;
     margin-left: 2.5%;
 }
   
