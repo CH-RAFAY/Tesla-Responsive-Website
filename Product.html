@@ -131,80 +131,74 @@
 
 <div class="Pcontainer">
   <div class="Plist">
-
-    <div class="Pheader">
-      <h2>Model Y</h2>
-      <h3>$ 500,000</h2>
-      <p>Model Y Rear-Wheel Drive</p>
-      <p>1,222 mile odometer</p>
-    </div>
-    <div class="Pbody">
-      <center>
-        <img src="imgs\Products\black.jpeg" alt="Image description (e.g., Model Y car)">
-      </center>
-    </div>
-  
-
-  
-  
-  </div>
-  
-  
-  <div class="Plist">
-  
-    <div class="Pheader">
-      <h2>Model Y</h2>
-      <h3>$ 500,000</h2>
-      <p>Model Y Rear-Wheel Drive</p>
-      <p>1,222 mile odometer</p>
-    </div>
-    <div class="Pbody">
-      <center>
-        <img src=" imgs\Products\blue.jpeg" alt="Image description (e.g., Model Y car)">
-      </center>
-    </div>
-   
-
-  
-  
-  
-  
-  
-  
+      <div class="Pheader">
+          <h2>Model Y</h2>
+          <h3>$ 500,000</h3>
+          <p>Model Y Rear-Wheel Drive</p>
+          <p>1,222 mile odometer</p>
+      </div>
+      <div class="Pbody">
+          <center>
+              <img src="imgs\Products\black.jpeg" alt="Model Y car">
+          </center>
+      </div>
+      <div class="overlay">
+          <button class="order-now-btn">Order Now</button>
+      </div>
   </div>
   
   <div class="Plist">
-  
-    <div class="Pheader">
-      <h2>Model S</h2>
-      <h3>$ 700,000</h3>
-      <p>Model S Long Range All-Wheel Drive</p>
-      <p>1,000 mile odometer</p>
-    </div>
-    <div class="Pbody">
-      <center>
-        <img src="imgs\Products\white.jpeg" alt="Image description (e.g., Model S car)">
-      </center>
-    </div>
-  
-
-  
-  
+      <div class="Pheader">
+          <h2>Model Y</h2>
+          <h3>$ 500,000</h3>
+          <p>Model Y Rear-Wheel Drive</p>
+          <p>1,222 mile odometer</p>
+      </div>
+      <div class="Pbody">
+          <center>
+              <img src="imgs\Products\blue.jpeg" alt="Model Y car">
+          </center>
+      </div>
+      <div class="overlay">
+          <button class="order-now-btn">Order Now</button>
+      </div>
   </div>
-  
+
   <div class="Plist">
-  
-    <div class="Pheader">
-      <h2>Model X</h2>
-      <h3>$ 600,000</h3>
-      <p>Model X Plaid All-Wheel Drive</p>
-      <p>800 mile odometer</p>
-    </div>
-    <div class="Pbody">
-      <center>
-        <img src="imgs\Products\Red.jpeg" alt="Image description (e.g., Model X car)">
-      </center>
-    </div>
+      <div class="Pheader">
+          <h2>Model S</h2>
+          <h3>$ 700,000</h3>
+          <p>Model S Long Range All-Wheel Drive</p>
+          <p>1,000 mile odometer</p>
+      </div>
+      <div class="Pbody">
+          <center>
+              <img src="imgs\Products\white.jpeg" alt="Model S car">
+          </center>
+      </div>
+      <div class="overlay">
+          <button class="order-now-btn">Order Now</button>
+      </div>
+  </div>
+
+  <div class="Plist">
+      <div class="Pheader">
+          <h2>Model X</h2>
+          <h3>$ 600,000</h3>
+          <p>Model X Plaid All-Wheel Drive</p>
+          <p>800 mile odometer</p>
+      </div>
+      <div class="Pbody">
+          <center>
+              <img src="imgs\Products\Red.jpeg" alt="Model X car">
+          </center>
+      </div>
+      <div class="overlay">
+          <button class="order-now-btn">Order Now</button>
+      </div>
+  </div>
+</div>
+
   
  
   
@@ -268,6 +262,16 @@
           } else {
               filterToggle.classList.remove('visible');
           }
+      });
+  });
+</script>
+
+
+<script>
+  document.querySelectorAll('.Plist').forEach(block => {
+      block.addEventListener('click', function() {
+          this.querySelector('.overlay').style.opacity = '1';
+          this.querySelector('.overlay').style.pointerEvents = 'auto';
       });
   });
 </script>

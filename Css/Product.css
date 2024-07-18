@@ -499,6 +499,7 @@ input[type="radio"]{
         transition: left 0.3s ease-in-out;
         z-index: 1001;
         overflow-y: auto;
+        
     }
 
     .bhalf.active {
@@ -554,4 +555,49 @@ input[type="radio"]{
   width: 90%;
 }
   
+}
+
+
+
+.Plist {
+  position: relative;
+  /* Keep your existing styles for Plist */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.Plist:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.order-now-btn {
+  width: 75%;
+  padding: 13px 20px;
+  background-color: transparent;
+  border: 3px solid black;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.order-now-btn:hover {
+  background-color: black;
+  color: white;
+  border: none;
 }
