@@ -5,102 +5,237 @@
   
   }
 
+    
+
 
   body{
     margin: 0;
     padding: 0;
   }
 
-
-  /* .c-1
-  {
-    background-color: white;
-  } */
-  
-  #logo{
+  #logo {
     width: 120px;
+    margin: 1%;
+  }
+  
+  .ico {
     display: flex;
- 
-    margin: 2.5%;
-
-
-  }
-
-  .ico{
-    margin-right: 1.5%;
-    margin-top: -30px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 2%;
   }
   
-  .ico img{
+  .ico img {
     width: 30px;
-    float: inline-end;
-    margin-right: 1%;
-    margin-top: -2.0%;
+    margin-right: 10px;
   }
   
- 
-  #icon1{
+  #icon1 {
     width: 37px;
-    margin-top: -2.3%;
   }
   
-  #icon2{
+  #icon2 {
     width: 27px;
-    margin-top: -1.8%;
+  }
+
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: top 0.3s, background-color 0.9s;
+    z-index: 1000;
   }
   
+  header.scrolling {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
   
-  nav{
+  header.static {
+    background-color: transparent;
+  }
+  
+  nav {
     padding-top: 0.5%;
+    position: relative;
   }
   
   nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-
-    }
-  
-   nav li {
-      
-      display:inline-block;
-      margin: 0.5%;
-      padding: 0.5% 1%;
-      border-radius: 4px;
-            display: none;
-
-    }
-  
-   ul li a{
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-      font-weight: 500;
-  
-    }
-  
-    nav ul li:hover{
-      background-color:rgba(126, 126, 126, 0.405);
-      transition: 0.7s all;
-    
-    }
-  
-  
-  .bo{
-   padding-top: 26%;
-   text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
-  button{
-    margin: 1%;
-    width: 16%;
-    padding: 0.8%;
-    border: none;
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
     font-weight: 500;
-    border-radius: 4px;
-    cursor: pointer;
   }
- 
+  
+  nav ul li:hover,.menu-toggle:hover{
+    background-color: rgba(126, 126, 126, 0.405);
+    transition: 0.7s all;
+    padding: 6px 15px;
+    border-radius: 5px;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    color: white;
+  }
+  
+  /* Logo and icons styles */
+  #logo {
+    width: 120px;
+    margin: 1%;
+  }
+  
+  .ico {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 2%;
+  }
+  
+  .ico img {
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  #icon1 {
+    width: 37px;
+  }
+  
+  #icon2 {
+    width: 27px;
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 1200px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding-top: 60px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+
+    }
+  
+    nav ul.active {
+      display: flex;
+      transform: translateX(0);
+    }
+  
+    nav ul li {
+      margin: 20px 0;
+      
+    }
+
+    nav ul li a {
+      margin: 20px 0;
+      color: #ffffff;
+      
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 3%;
+      font-size: 20px;
+      margin-right: 3%;
+      width: 110px;
+      background-color: #333;
+      color: rgb(255, 255, 255);
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  
+    .ico img, #icon1, #icon2 {
+      display: none;
+    }
+
+
+    .section-1
+    {
+      margin-top: 25%;
+      max-width: 65%;
+    }
+
+
+  }
+
+
+
+  
+  /* Additional media queries for smaller screens */
+  @media (max-width: 768px) {
+    .nav-container {
+      padding: 0 10px;
+      margin: 2%;
+    }
+  
+    .menu-toggle {
+
+      width: 80px;
+      padding: auto;
+    }
+
+    .section-1
+    {
+      margin-top: 50%;
+    }
+
+
+  }
+  
+  @media (max-width: 480px) {
+    .menu-toggle {
+      right: 5%;
+      width: 70px;
+      padding: 6px;
+      font-size: 17px;
+    }
+  }
+   
+  @media (max-width: 350px) {
+    .menu-toggle {
+      right: 7%;
+      width: 60px;
+      padding: 5px;
+      font-size: 15px;
+
+    }
+  }
    
 
   /* Section-1 ------------------ */
@@ -296,7 +431,24 @@ input:checked + .slider:before {
       display: inline-block;
   }
 
+  .section-1
+  {
+    margin-top: 20%;
+    max-width: 65%;
+  }
+
 }
+
+@media (max-width: 1000px) {
+
+  .section-1
+  {
+    margin-top: 30%;
+    max-width: 65%;
+  }
+
+}
+
 
 
 @media (max-width: 850px) {

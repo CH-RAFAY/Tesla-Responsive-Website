@@ -13,27 +13,28 @@
 
 <body>
 
+
+
     <header>
         <nav>
-            <ul>
-                
-                    
+            <div class="nav-container">
+                <img src="Icon/T Grey.png" id="logo">
+                <button class="menu-toggle" id="menu-toggle">
+                    <span class="material-icons">menu</span>
+                </button>
+                <ul id="nav-menu">
                     <li><a href="">Vehicle</a></li>
                     <li><a href="">Energy</a></li>
                     <li><a href="">Charging</a></li>
                     <li><a href="">Discover</a></li>
-                    <li><a href="">Shop</a></li>  
-                    
-    
-                <img src="Icon\T Black.png" id="logo"> 
-                
+                    <li><a href="">Shop</a></li>
+                </ul>
                 <div class="ico">
                     <img src="Icon\HB.png" alt="" id="icon1">
                     <img src="Icon\WB.png" alt="" id="icon2">
                     <img src="Icon\AB.png" alt="" id="icon3">
                 </div>
-            
-            </ul>
+            </div>
         </nav>
     </header>
 
@@ -105,6 +106,38 @@
                 this.classList.add('selected');
             });
         });
+    </script>
+
+    <script>
+        let lastScrollTop = 0;
+let isScrolling;
+const header = document.querySelector('header');
+const headerHeight = header.offsetHeight;
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop) {
+        header.style.top = `-${headerHeight}px`;
+        header.classList.remove('scrolling', 'static');
+    } else {
+        header.style.top = '0';
+        header.classList.add('scrolling');
+        header.classList.remove('static');
+    }
+    
+    lastScrollTop = Math.max(scrollTop, 0);
+    clearTimeout(isScrolling);
+
+    isScrolling = setTimeout(function() {
+        header.classList.remove('scrolling');
+        header.classList.add('static');
+    }, 200); 
+});
+
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.getElementById('nav-menu').classList.toggle('active');
+});
     </script>
 
 
