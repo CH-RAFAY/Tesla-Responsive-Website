@@ -157,11 +157,11 @@ nav ul li:hover,.menu-toggle:hover,.filter-toggle:hover{
       right: 4%;
       font-size: 20px;
       margin-right: 3%;
-      width: 10%;
+      width: 110px;
       margin-top: 5%;
 
 
-      border: 1px solid rgb(112, 112, 112);
+      border: 2px solid rgb(0, 0, 0);
 
   }
 
@@ -398,6 +398,7 @@ input[type="radio"]{
   box-sizing: border-box;
   text-align: center;
   overflow: hidden;
+  padding: 10px;
 }
 
 .Pheader{
@@ -475,6 +476,7 @@ input[type="radio"]{
 
     .menu-toggle {
         display: block;
+        width: 110px;
     }
 
     .ico {
@@ -483,9 +485,9 @@ input[type="radio"]{
 
     .filter-toggle {
         display: block;
-        max-width: 10%;
-        margin-right: 4.5%;
-        margin-top: 0%;
+        width: 110px;
+        margin-right: 4%;
+        margin-top: 20px;
     }
 
     .bhalf {
@@ -509,14 +511,19 @@ input[type="radio"]{
 }
 
 @media (max-width: 768px) {
-    .Plist {
-        width: 100%;
+    
+   .Plist {
+        width: auto;
+
     }
+    .Pcontainer {
+      width: 85%;
+  }
     .filter-toggle {
       display: block;
-      max-width: 12%;
-      margin-right: 4.5%;
-      margin-top: 0%;
+      width: 110px;
+      margin-right: 4%;
+      margin-top: 20px;
   }
 }
 
@@ -526,17 +533,25 @@ input[type="radio"]{
     }
     .filter-toggle {
       display: block;
-      max-width: 12%;
-      margin-right: 4.5%;
-      margin-top: 0%;
+      width: 110px;
+      margin-right: 4%;
+      margin-top: 20px;
   }
   .menu-toggle {
-    display: none;
+    display: block;
     background: none;
-    border: none;
     cursor: pointer;
     color: rgb(0, 0, 0);
+    width: 110px;
   
   }
+
+  .Plist {
+    width: auto;
+
+}
+.Pcontainer {
+  width: 90%;
+}
   
 }
