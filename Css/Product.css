@@ -271,7 +271,8 @@ nav ul li:hover,.menu-toggle:hover,.filter-toggle:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 90%;
+    width: auto;
+    max-width: 90%;
 
 }
 
@@ -284,6 +285,7 @@ nav ul li:hover,.menu-toggle:hover,.filter-toggle:hover{
     background-color: #f00;
     animation: spin 2s linear infinite;
 }
+
 
 @keyframes spin {
     from { transform: rotate(0deg); }
@@ -411,7 +413,7 @@ input[type="radio"]{
 
 .Pbody img
 {
-  width: 400px;
+  width: 80%;
 
 }
 
@@ -427,6 +429,41 @@ input[type="radio"]{
 
 
 
+
+@media (max-width: 1300px) 
+{
+
+  .Pcontainer
+  {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    
+  
+  }
+
+  .color-box 
+{
+    width:30px;
+    height:30px;
+    
+}
+
+  
+  .Plist {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: solid 1px white;
+    margin: 10px;
+    width: 46%;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+  }
+
+}
 
 
 
