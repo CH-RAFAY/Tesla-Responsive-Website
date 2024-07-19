@@ -585,6 +585,16 @@ input[type="radio"]{
   pointer-events: auto;
 }
 
+.overlay a {
+  width: 75%;
+  padding: 13px 20px;
+  background-color: transparent;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .order-now-btn {
   width: 75%;
   padding: 13px 20px;

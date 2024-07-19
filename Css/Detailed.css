@@ -187,7 +187,7 @@
 
     .section-1
     {
-      margin-top: 25%;
+      margin-top: 10%;
       max-width: 65%;
     }
 
@@ -251,6 +251,7 @@
 .imgsc
 {
 margin: 10%;
+margin-top: 20%;
 }
 
 .imgsc img
@@ -443,7 +444,7 @@ input:checked + .slider:before {
 
   .section-1
   {
-    margin-top: 30%;
+    margin-top: 20%;
     max-width: 65%;
   }
 
@@ -451,7 +452,7 @@ input:checked + .slider:before {
 
 
 
-@media (max-width: 850px) {
+@media (max-width: 880px) {
   #logo {
       width: 100px;
   }
@@ -467,6 +468,7 @@ input:checked + .slider:before {
   .section-1 {
       max-width: 100%;
       height: auto;
+      margin-top: 15%;
   }
 
 }
