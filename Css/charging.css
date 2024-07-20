@@ -18,6 +18,7 @@
   #logo {
     width: 120px;
     margin: 1%;
+    cursor: pointer;
   }
   
   .ico {

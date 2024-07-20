@@ -5,17 +5,17 @@
 
 }
 
-  
-
 
 body{
   margin: 0;
   padding: 0;
 }
 
+
 #logo {
   width: 120px;
   margin: 1%;
+  cursor: pointer;
 }
 
 .ico {
