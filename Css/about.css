@@ -1,0 +1,316 @@
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: top 0.3s, background-color 0.9s;
+    z-index: 1000;
+}
+
+header.scrolling {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+header.static {
+    background-color: transparent;
+}
+
+nav {
+    padding-top: 0.5%;
+    position: relative;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+}
+
+#logo {
+    width: 120px;
+    margin: 1%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+nav ul li:hover, .menu-toggle:hover {
+    background-color: rgba(126, 126, 126, 0.405);
+    transition: 0.7s all;
+    padding: 6px 15px;
+    border-radius: 5px;
+}
+
+.ico {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 2%;
+}
+
+.ico img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+#icon1 {
+    width: 37px;
+}
+
+#icon2 {
+    width: 27px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    color: white;
+    right: 3%;
+}
+
+.about-us-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 10%;
+    background-image: url('https://wallpapers.com/downloads/high/tesla-model-3-black-desktop-4i26nn4v3sabxgwg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+
+.about-us-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.about-us-content h1, .about-us-content p {
+    position: relative;
+    z-index: 1;
+}
+
+.about-us-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-us-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+@media (max-width: 1200px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        background-color: rgba(25, 25, 25, 0.9);
+        padding-top: 60px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        font-size: 20px;
+        margin-right: 3%;
+        width: 10%;
+    }
+
+    .ico img, #icon1, #icon2 {
+        display: none;
+    }
+}
+
+
+
+/* Tablet Devices */
+@media (max-width: 1024px) {
+    .bo {
+      padding-top: 40%;
+    }
+  
+    button {
+      width: 30%;
+      padding: 1.2%;
+    }
+  
+    #Y {
+      font-size: 40px;
+      margin-bottom: 50px;
+    }
+  
+    #Pr {
+      font-size: 20px;
+    }
+  
+    #L {
+      font-size: 13px;
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      font-size: 20px;
+      width: 15%;
+  
+  }
+  
+  
+  }
+  
+  /* Mobile Devices */
+  @media (max-width: 768px) {
+    .portion {
+      margin-top: 20%;
+    }
+  
+    .bo {
+      padding-top: 40%;
+    }
+  
+    button {
+      width: 70%;
+      padding: 2%;
+      margin: 2% 0;
+    }
+  
+    #Y {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+  
+    #Pr {
+      font-size: 18px;
+    }
+  
+    #L {
+      font-size: 12px;
+    }
+  
+    #lp, #ll {
+      font-size: 12px;
+    }
+  
+    .nav-container {
+      padding: 0 10px;
+      margin: 2%;
+  
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      font-size: 20px;
+      width: 20%;
+  
+  }
+  
+  
+  }
+  
+  /* Small Mobile Devices */
+  @media (max-width: 480px) {
+    .portion {
+      margin-top: 25%;
+    }
+  
+    .bo {
+      padding-top: 70%;
+    }
+  
+    button {
+      width: 90%;
+      padding: 4%;
+    }
+  
+    #Y {
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+  
+    #Pr {
+      font-size: 16px;
+    }
+  
+    #L {
+      font-size: 11px;
+    }
+  
+    #lp, #ll {
+      font-size: 11px;
+    }
+  
+  
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      font-size: 20px;
+      width: 25%;
+  
+  }
+  
+  }

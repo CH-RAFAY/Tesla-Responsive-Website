@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imgs/T.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>About Us | Tesla</title>
+    <link rel="stylesheet" href="Css\about.css">
+</head>
+
+
+<body>
+
+
+    <header>
+        <nav>
+            <div class="nav-container">
+                <img src="Icon/T Grey.png" id="logo" alt="Tesla Logo">
+                <button class="menu-toggle" id="menu-toggle">
+                    <span class="material-icons">menu</span>
+                </button>
+                <ul id="nav-menu">
+                    <li><a href="Product.html">Vehicle</a></li>
+                    <li><a href="Energy.html">Energy</a></li>
+                    <li><a href="Energy.html">Charging</a></li>
+                    <li><a href="about.html">Discover</a></li>
+                    <li><a href="Product.html">Shop</a></li>
+                </ul>
+                <div class="ico">
+                    <img src="Icon/HW.png" alt="" id="icon1">
+                    <img src="Icon/WW.png" alt="" id="icon2">
+                    <img src="Icon/AW.png" alt="" id="icon3">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="about-us-content">
+            <h1>About Tesla</h1>
+            <p>Tesla's mission is to accelerate the world's transition to sustainable energy. We design and manufacture electric vehicles, solar panels, energy storage systems, and related products. Our team is driven by a passion for innovation and a commitment to creating a cleaner, more sustainable future for all.</p>
+        </section>
+    </main>
+
+
+
+    <script>
+        let lastScrollTop = 0;
+        let isScrolling;
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight;
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop) {
+                header.style.top = `-${headerHeight}px`;
+                header.classList.remove('scrolling', 'static');
+            } else {
+                header.style.top = '0';
+                header.classList.add('scrolling');
+                header.classList.remove('static');
+            }
+            
+            lastScrollTop = Math.max(scrollTop, 0);
+            clearTimeout(isScrolling);
+
+            isScrolling = setTimeout(function() {
+                header.classList.remove('scrolling');
+                header.classList.add('static');
+            }, 200);
+        });
+
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+    </script>
+
+<script src="Javascript\effect.js"></script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
