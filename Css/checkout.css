@@ -1,0 +1,342 @@
+* {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  
+  }
+  /* General styles */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  #logo {
+    width: 120px;
+    margin: 1%;
+  }
+  
+  .ico {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 2%;
+  }
+  
+  .ico img {
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  #icon1 {
+    width: 37px;
+  }
+  
+  #icon2 {
+    width: 27px;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: top 0.3s, background-color 0.9s;
+    z-index: 1000;
+  }
+  
+  header.scrolling {
+    background-color: rgba(0, 0, 0, 0.9); /* Adjust opacity as needed */
+  }
+  
+  header.static {
+    background-color: transparent;
+  }
+  
+  nav {
+    padding-top: 0.5%;
+    position: relative;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+  }
+  
+  nav ul li:hover,.menu-toggle:hover,.filter-toggle:hover{
+    background-color: rgba(126, 126, 126, 0.405);
+    transition: 0.7s all;
+    padding: 6px 15px;
+    border-radius: 5px;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5%;
+    position: relative;
+    width: 100%;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    color: rgb(0, 0, 0);
+  
+  }
+  
+  
+  
+  
+  .filter-toggle {
+    margin-top: 3%;
+    display: none;
+    font-size: 20px;
+    float: right;
+    margin-right: 3%;
+    background-color: transparent;
+    background-color: #00000010;
+  
+  
+  }
+  
+  
+  /* Media queries */
+  @media (max-width: 1200px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding-top: 60px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+  
+  
+    nav ul.active {
+        display: flex;
+        transform: translateX(0);
+    }
+  
+    nav ul li {
+        margin: 20px 0;
+    }
+  
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 4%;
+        font-size: 20px;
+        margin-right: 3%;
+        width: 110px;
+        margin-top: 5%;
+  
+  
+        border: 2px solid rgb(0, 0, 0);
+  
+    }
+  
+  
+  
+    
+    .ico img, #icon1, #icon2 {
+      display: none;
+    }
+  
+    nav ul li a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-weight: 500;
+    }
+  
+  
+  
+  }
+  
+  
+  
+    
+    .bo{
+     padding-top: 26%;
+     text-align: center;
+    }
+    
+    button{
+      margin: 1%;
+      width: 16%;
+      padding: 0.8%;
+      border: none;
+      font-weight: 500;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+   
+
+
+    body {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .form-container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    
+    #mileage, #email,#car-image
+    {
+        width: calc(97.5% - 20px);
+        padding: 10px;
+        border: 2.5px solid #ababab;
+        border-radius: 4px;
+        margin-right: 5px;
+        font-size: 15px;
+        margin-top: 15px;
+    
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 17px;
+    }
+    
+    .form-group input {
+        width: auto;
+        padding: 10px;
+        border: 2.5px solid #949494;
+        border-radius: 4px;
+        margin-right: 5px;
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    
+    .form-group select
+    {
+        width: calc(100% - 10px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 5px;
+        font-size: 15px;
+    }
+    
+    
+    
+    
+    .form-group input.hidden {
+        display: none;
+    }
+    
+    .form-group select:focus,
+    .form-group select.selected,
+    .form-group input:focus {
+        border: 2.5px solid green;
+    }
+    
+    
+    
+    
+    .option-box {
+        display: inline-block;
+        padding: 15px 40px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin: 5px;
+        cursor: pointer;
+    }
+    
+    .option-box.selected {
+        border: 2.5px solid green;
+        color: green;
+        font-weight: 600;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .submit-btn {
+        display: block;
+        margin: 30px auto;
+        width: 60%;
+        padding: 10px;
+        background-color: #00d058;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+         ;
+    }
+    
+    
+    
+    .submit-btn {
+      /* Existing styles from previous example */
+      display: block;
+      margin: 30px auto;
+      width: 60%;
+      padding: 10px;
+      background-color: #00d058;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out; 
+    }
+    
+    .submit-btn:hover {
+      background-color: #32cd70;
+    }
+    
+    .submit-btn:active {
+      background-color: #034e28; 
+    }
+    
+    
+    
+    
+    
+    
+    .submit-btn:disabled {
+        background-color: #ccc;
+    }
+    
+    .form-group select option {
+      padding: 10px; 
+    }

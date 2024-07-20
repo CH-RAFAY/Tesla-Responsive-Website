@@ -358,7 +358,8 @@ margin-top: 20%;
 }
 
 .feature-details:hover {
-  background-color: #ccc;
+  background-color: #1d1d1d;
+  color: #ffffff;
 }
 
 .toggle-section {

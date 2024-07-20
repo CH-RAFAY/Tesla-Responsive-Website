@@ -1,6 +1,6 @@
 const config = {
     logoSelector: '#logo',
-    logoLink: 'https://example.com',
+    logoLink: 'index.html',
     transitionDuration: 300,
   };
   

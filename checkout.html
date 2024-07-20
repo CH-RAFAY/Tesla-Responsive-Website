@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imgs\T.png">
+    <link rel="stylesheet" type="text/css" href="Css\Detailed.css">
+    <title>Tesla | Detailed </title>
+</head>
+
+<body>
+
+
+
+    <header>
+        <nav>
+            <div class="nav-container">
+                <img src="Icon\T Black.png" id="logo">
+                <button class="menu-toggle" id="menu-toggle">
+                    <span class="material-icons">menu</span>
+                </button>
+                <ul id="nav-menu">
+                    <li><a href="">Vehicle</a></li>
+                    <li><a href="">Energy</a></li>
+                    <li><a href="">Charging</a></li>
+                    <li><a href="">Discover</a></li>
+                    <li><a href="">Shop</a></li>
+                </ul>
+                <div class="ico">
+                    <img src="Icon\HB.png" alt="" id="icon1">
+                    <img src="Icon\WB.png" alt="" id="icon2">
+                    <img src="Icon\AB.png" alt="" id="icon3">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #efefef;
+        }
+        
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            margin-top: 15%;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        
+        #mileage, #email,#car-image
+        {
+            width: calc(97.5% - 20px);
+            padding: 10px;
+            border: 2.5px solid #ababab;
+            border-radius: 4px;
+            margin-right: 5px;
+            font-size: 15px;
+            margin-top: 15px;
+        
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 17px;
+        }
+        
+        .form-group input {
+            width: auto;
+            padding: 10px;
+            border: 2.5px solid #949494;
+            border-radius: 4px;
+            margin-right: 5px;
+            font-size: 15px;
+            margin-top: 15px;
+        }
+        
+        .form-group select
+        {
+            width: calc(100% - 10px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 5px;
+            font-size: 15px;
+        }
+        
+        
+        
+        
+        .form-group input.hidden {
+            display: none;
+        }
+        
+        .form-group select:focus,
+        .form-group select.selected,
+        .form-group input:focus {
+            border: 2.5px solid rgb(0, 0, 0);
+        }
+        
+        
+        
+        
+        .option-box {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        
+        .option-box.selected {
+            border: 2.5px solid rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .submit-btn {
+            display: block;
+            margin: 30px auto;
+            width: 60%;
+            padding: 10px;
+            background-color: #ff2828;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+             ;
+        }
+        
+        
+        
+        .submit-btn {
+          /* Existing styles from previous example */
+          display: block;
+          margin: 30px auto;
+          width: 60%;
+          padding: 10px;
+          background-color: #000000;
+          border: none;
+          border-radius: 5px;
+          color: white;
+          font-size: 20px;
+          cursor: pointer;
+          transition: background-color 0.2s ease-in-out; 
+        }
+        
+        .submit-btn:hover {
+          background-color: #32cd70;
+        }
+        
+        .submit-btn:active {
+          background-color: #034e28; 
+        }
+        
+        
+        
+        
+        
+        
+        .submit-btn:disabled {
+            background-color: #ccc;
+        }
+        
+        .form-group select option {
+          padding: 10px; 
+        }
+            </style>
+        </head>
+        <body>
+        
+        <div class="form-container">
+            <form id="car-review-form">
+                <div class="form-group">
+                    <label for="brand">What brand is your car?</label>
+                    <select id="brand">
+                        <option value="">Select brand</option>
+                        <option value="Abarth">Abarth</option>
+                        <option value="Alfa Romeo">Alfa Romeo</option>
+                        <option value="Alpina">Alpina</option>
+                        <option value="Aston Martin">Aston Martin</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Bentley">Bentley</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="Cadillac">Cadillac</option>
+                        <option value="Caterham">Caterham</option>
+                        <option value="Chrysler">Chrysler</option>
+                        <option value="Citroën">Citroën</option>
+                        <option value="Corvette">Corvette</option>
+                        <option value="VITAL NI">VITAL NI</option>
+                        <option value="Smart">Smart</option>
+                        <option value="Seat Leon">Seat Leon</option>
+                        <option value="Renault">Renault</option>
+                        <option value="Daewoo">Daewoo</option>
+                        <option value="Daihatsu">Daihatsu</option>
+                        <option value="Dodge">Dodge</option>
+                        <option value="DS Automobiles">DS Automobiles</option>
+                        <option value="Ferrari">Ferrari</option>
+                        <option value="Fiat">Fiat</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Hyundai">Hyundai</option>
+                        <option value="INEOS">INEOS</option>
+                        <option value="Infiniti">Infiniti</option>
+                        <option value="Isuzu">Isuzu</option>
+                        <option value="Iveco">Iveco</option>
+                        <option value="Jaguar">Jaguar</option>
+                        <option value="Jeep">Jeep</option>
+                        <option value="Kia">Kia</option>
+                        <option value="Lada">Lada</option>
+                        <option value="Lamborghini">Lamborghini</option>
+                        <option value="Lancia">Lancia</option>
+                        <option value="Land Rover">Land Rover</option>
+                        <option value="Lexus">Lexus</option>
+                        <option value="Lotus">Lotus</option>
+                        <option value="Lucid">Lucid</option>
+                        <option value="Lynk & Co">Lynk & Co</option>
+                        <option value="Mahindra">Mahindra</option>
+                        <option value="ONE">ONE</option>
+                        <option value="Maserati">Maserati</option>
+                        <option value="MAXUS">MAXUS</option>
+                        <option value="Mazda">Mazda</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                        <option value="MG">MG</option>
+                        <option value="MG Rover">MG Rover</option>
+                        <option value="MINI">MINI</option>
+                        <option value="Mitsubishi">Mitsubishi</option>
+                        <option value="NIO">NIO</option>
+                        <option value="Nissan">Nissan</option>
+                        <option value="Opel">Opel</option>
+                        <option value="Peugeot">Peugeot</option>
+                        <option value="Piaggio (Vespa)">Piaggio (Vespa)</option>
+                        <option value="Polestar">Polestar</option>
+                        <option value="Pontiac">Pontiac</option>
+                        <option value="Porsche">Porsche</option>
+                        <option value="Proton">Proton</option>
+                        <option value="Renault">Renault</option>
+                        <option value="Rover">Rover</option>
+                        <option value="Saab">Saab</option>
+                        <option value="Seat">Seat</option>
+                        <option value="Skoda">Skoda</option>
+                        <option value="Smart">Smart</option>
+                        <option value="Ssangyong">Ssangyong</option>
+                        <option value="Subaru">Subaru</option>
+                        <option value="Suzuki">Suzuki</option>
+                        <option value="Tata">Tata</option>
+                        <option value="Tesla">Tesla</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Trabant">Trabant</option>
+                        <option value="Triumph">Triumph</option>
+                        <option value="VinFast">VinFast</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                        <option value="Volvo">Volvo</option>
+                        <option value="Wartburg">Wartburg</option>
+                        <option value="Westfield">Westfield</option>
+                        <option value="Zastava">Zastava</option>
+                    </select>
+                    <input type="text" id="brand-other" class="hidden" placeholder="Enter brand">
+                </div>
+                <div class="form-group">
+                    <label for="model">Which model?</label>
+                    <select id="model" disabled>
+                        <option value="">Select model</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="text" id="model-other" class="hidden" placeholder="Enter model">
+                </div>
+                <div class="form-group">
+                    <label for="year">In which year was it registered?</label>
+                    <select id="year" disabled>
+                        <option value="">Select first registration</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="text" id="year-other" class="hidden" placeholder="Enter year">
+                </div>
+        
+                <div class="form-group hidden" id="shape-group">
+                    <label for="shape">What shape does it have?</label>
+                    <div class="option-box" data-value="Roadster">Roadster</div>
+                    <div class="option-box" data-value="SUV">SUV</div>
+                    <div class="option-box" data-value="Other">Other</div>
+                    <input type="text" id="shape-other" class="hidden" placeholder="Enter shape">
+                </div>
+        
+                <div class="form-group hidden" id="fuel-group">
+                    <label for="fuel">What fuel does it use?</label>
+                    <div class="option-box" data-value="Petrol">Petrol</div>
+                    <div class="option-box" data-value="Electric">Electric</div>
+                    <!--<div class="option-box" data-value="Hybrid">Hybrid</div>-->
+                    <div class="option-box" data-value="Other">Other</div>
+                    <input type="text" id="fuel-other" class="hidden" placeholder="Enter fuel type">
+                </div>
+        
+                <div class="form-group hidden" id="variant-group">
+                    <label for="variant">Which model variant is it?</label>
+                    <div class="option-box" data-value="1.6">1.6 L</div>
+                    <div class="option-box" data-value="1.8">1.8 L</div>
+                    <div class="option-box" data-value="Other">Other</div>
+                    <input type="text" id="variant-other" class="hidden" placeholder="Enter model variant">
+                </div>
+        
+                <div class="form-group hidden" id="horsepower-group">
+                    <label for="horsepower">How many horsepower does it have?</label>
+                    <div class="option-box" data-value="147 kW ">147 kW </div>
+                    <div class="option-box" data-value="294 kW ">294 kW </div>
+                    <div class="option-box" data-value="Other">Other</div>
+                    <input type="text" id="horsepower-other" class="hidden" placeholder="Enter horsepower">
+                </div>
+        
+                <div class="form-group hidden" id="transmission-group">
+                    <label for="transmission">What transmission does it have?</label>
+                    <div class="option-box" data-value="Automatic">Automatic</div>
+                    <div class="option-box" data-value="Manual">Manual</div>
+                    <div class="option-box" data-value="Other">Other</div>
+                    <input type="text" id="transmission-other" class="hidden" placeholder="Enter transmission type">
+                </div>
+        
+                <div class="form-group hidden" id="doors-group">
+                    <label for="doors">How many doors does it have?</label>
+                    <div class="option-box" data-value="2 doors">2 doors</div>
+                    <div class="option-box" data-value="4 doors">4 doors</div>
+                    <div class="option-box" data-value="Other">Other</div>
+                    <input type="text" id="doors-other" class="hidden" placeholder="Enter number of doors">
+                </div>
+        
+                <div class="form-group hidden" id="mileage-group">
+                    <label for="mileage">What is the mileage?</label>
+                    <input type="text" id="mileage" placeholder="Enter mileage">
+                </div>
+                
+                <div class="form-group hidden" id="additional-options-group">
+                    <div class="form-group">
+                        <label for="sell-plan">When do you plan to sell?</label>
+                        <select id="sell-plan">
+                            <option value="">Select timeframe</option>
+                            <option value="next-4-weeks">Over the next 4 weeks</option>
+                            <option value="next-3-months">Over the next 3 months</option>
+                            <option value="next-6-months">Over the next 6 months</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefer-to-sell">Who do you prefer to sell to?</label>
+                        <select id="prefer-to-sell">
+                            <option value="">Select option</option>
+                            <option value="private">To Private</option>
+                            <option value="dealer">To Dealer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Where can we send the sales offer?</label>
+                        <input type="email" id="email" placeholder="Please enter email address">
+                    </div>
+                </div>
+        
+                <div class="form-group hidden" id="upload-image-group">
+                    <label for="car-image">Upload an image of your car</label>
+                    <input type="file" id="car-image" accept="image/*">
+                </div>
+        
+                <button type="submit" class="submit-btn" disabled>Let Submit Review!</button>
+            </form>
+        
+        
+        </div>
+        
+        <script>
+        const carMakes = [
+            'Abarth', 'Alfa Romeo', 'Alpina', 'Aston Martin', 'Audi', 'Bentley', 'BMW', 'Chevrolet',
+            'Cadillac', 'Caterham', 'Chrysler', 'Citroën', 'Corvette', 'VITAL NI', 'Smart', 'Seat Leon',
+            'Renault', 'Daewoo', 'Daihatsu', 'Dodge', 'DS Automobiles', 'Ferrari', 'Fiat', 'Ford', 'Honda',
+            'Hyundai', 'INEOS', 'Infiniti', 'Isuzu', 'Iveco', 'Jaguar', 'Jeep', 'Kia', 'Lada', 'Lamborghini',
+            'Lancia', 'Land Rover', 'Lexus', 'Lotus', 'Lucid', 'Lynk & Co', 'Mahindra', 'ONE', 'Maserati',
+            'MAXUS', 'Mazda', 'Mercedes-Benz', 'MG', 'MG Rover', 'MINI', 'Mitsubishi', 'NIO', 'Nissan', 
+            'Opel', 'Peugeot', 'Piaggio (Vespa)', 'Polestar', 'Pontiac', 'Porsche', 'Proton', 'Renault',
+            'Rover', 'Saab', 'Seat', 'Skoda', 'Smart', 'Ssangyong', 'Subaru', 'Suzuki', 'Tata', 'Tesla',
+            'Toyota', 'Trabant', 'Triumph', 'VinFast', 'Volkswagen', 'Volvo', 'Wartburg', 'Westfield 1 von 3',
+            'Zastava Anzahl Sc'
+        ];
+        
+        const carModels = {
+            'Abarth': ['124 Spider', '595', '695'],
+            'Alfa Romeo': ['Giulia', 'Stelvio', 'Giulietta'],
+            'Alpina': ['B3', 'B4', 'B5'],
+            'Aston Martin': ['DB11', 'Vantage', 'DBS'],
+            'Audi': ['A3', 'A4', 'A6', 'Q5', 'Q7'],
+            'Bentley': ['Continental', 'Flying Spur', 'Bentayga'],
+            'BMW': ['3 Series', '4 Series', '5 Series', '7 Series', 'X1', 'X3'],
+            'Bugatti': ['Chiron', 'Divo', 'Centodieci', 'Bolide'],
+            'Buick': ['Enclave', 'Encore', 'Envision', 'Regal', 'Lacrosse'],
+            'Cadillac': ['ATS', 'CTS', 'Escalade', 'XT4', 'XT5', 'XT6'],
+            'Chevrolet': ['Camaro', 'Corvette', 'Equinox', 'Silverado', 'Tahoe'],
+            'Chrysler': ['300', 'Pacifica', 'Voyager'],
+            'Citroën': ['C1', 'C3', 'C4', 'C5', 'C6', 'Berlingo', 'DS3', 'DS4', 'DS5'],
+            'Dacia': ['Duster', 'Sandero', 'Logan', 'Lodgy', 'Dokker'],
+            'Dodge': ['Challenger', 'Charger', 'Durango', 'Journey', 'Ram 1500'],
+            'Ferrari': ['488', '812', 'California', 'F8', 'Portofino', 'Roma'],
+            'Fiat': ['500', 'Panda', 'Tipo', 'Punto', '500X'],
+            'Ford': ['Fiesta', 'Focus', 'Mustang', 'Explorer', 'F-150', 'Escape'],
+            'GMC': ['Acadia', 'Canyon', 'Sierra', 'Terrain', 'Yukon'],
+            'Honda': ['Accord', 'Civic', 'CR-V', 'Fit', 'HR-V', 'Pilot'],
+            'Hyundai': ['Elantra', 'Santa Fe', 'Tucson', 'Sonata', 'Veloster'],
+            'Jaguar': ['XE', 'XF', 'F-Type', 'E-Pace', 'F-Pace', 'I-Pace'],
+            'Jeep': ['Cherokee', 'Compass', 'Gladiator', 'Grand Cherokee', 'Wrangler'],
+            'Kia': ['Forte', 'Optima', 'Sorento', 'Soul', 'Sportage'],
+            'Lamborghini': ['Aventador', 'Huracan', 'Urus', 'Gallardo', 'Murcielago'],
+            'Lancia': ['Delta', 'Ypsilon', 'Thema', 'Voyager'],
+            'Land Rover': ['Discovery', 'Range Rover', 'Evoque', 'Defender', 'Freelander'],
+            'Lexus': ['ES', 'GS', 'IS', 'LS', 'NX', 'RX'],
+            'Maserati': ['Ghibli', 'Levante', 'Quattroporte', 'GranTurismo', 'MC20'],
+            'Mazda': ['3', '6', 'CX-5', 'MX-5', 'CX-3', 'CX-9'],
+            'McLaren': ['540C', '570S', '650S', '675LT', '720S', 'P1', 'GT'],
+            'Mercedes-Benz': ['A-Class', 'C-Class', 'E-Class', 'S-Class', 'GLA', 'GLE', 'AMG GT'],
+            'Mini': ['Cooper', 'Countryman', 'Clubman', 'Paceman'],
+            'Mitsubishi': ['Eclipse Cross', 'Outlander', 'Lancer', 'Mirage'],
+            'Nissan': ['Altima', 'Maxima', 'Murano', 'Pathfinder', 'Rogue', 'Titan'],
+            'Opel': ['Astra', 'Corsa', 'Insignia', 'Mokka', 'Zafira'],
+            'Pagani': ['Huayra', 'Zonda'],
+            'Peugeot': ['208', '308', '3008', '508', '5008'],
+            'Porsche': ['911', 'Cayenne', 'Macan', 'Panamera', 'Taycan'],
+            'RAM': ['1500', '2500', '3500', '4500', '5500'],
+            'Renault': ['Clio', 'Megane', 'Captur', 'Kadjar', 'Talisman'],
+            'Rolls-Royce': ['Ghost', 'Wraith', 'Dawn', 'Cullinan', 'Phantom'],
+            'Saab': ['9-3', '9-5', '900', '9000'],
+            'Seat': ['Ibiza', 'Leon', 'Arona', 'Ateca', 'Tarraco'],
+            'Skoda': ['Fabia', 'Octavia', 'Kodiaq', 'Superb', 'Kamiq'],
+            'Smart': ['Fortwo', 'Forfour'],
+            'Subaru': ['Impreza', 'Forester', 'Outback', 'Legacy', 'WRX'],
+            'Suzuki': ['Swift', 'Vitara', 'Jimny', 'Baleno', 'SX4'],
+            'Tesla': ['Model 3', 'Model S', 'Model X', 'Model Y'],
+            'Toyota': ['Camry', 'Corolla', 'Highlander', 'RAV4', 'Tacoma'],
+            'Volkswagen': ['Golf', 'Passat', 'Polo', 'Tiguan', 'Touareg'],
+            'Volvo': ['XC40', 'XC60', 'XC90', 'S60', 'V60', 'V90'],
+            'Wartburg': ['311', '353', '1.3'],
+            'Westfield': ['Seven', 'XTR2', 'Sport 250'],
+            'Zastava': ['Yugo', 'Skala', 'Florida'],
+            'Other': ['Other']
+        };
+        
+        const carYears = {
+            'Abarth': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Alfa Romeo': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Alpina': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Aston Martin': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Audi': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Bentley': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'BMW': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Bugatti': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Buick': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Cadillac': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Chevrolet': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Chrysler': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Citroën': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Dacia': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Dodge': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Ferrari': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Fiat': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Ford': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'GMC': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Honda': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Hyundai': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Jaguar': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Jeep': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Kia': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Lamborghini': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Lancia': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Land Rover': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Lexus': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Maserati': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Mazda': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'McLaren': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Mercedes-Benz': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Mini': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Mitsubishi': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Nissan': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Opel': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Pagani': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Peugeot': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Porsche': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'RAM': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Renault': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Rolls-Royce': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Saab': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Seat': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Skoda': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Smart': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Subaru': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Suzuki': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Tesla': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Toyota': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Volkswagen': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Volvo': [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            'Wartburg': [1956, 1966, 1988],
+            'Westfield': [1982, 2000, 2015],
+            'Zastava': [1980, 1971, 1988],
+        
+            'Other': ['Other']
+        };
+        
+        document.getElementById('brand').addEventListener('change', function() {
+            var brand = this.value;
+            var modelSelect = document.getElementById('model');
+            var yearSelect = document.getElementById('year');
+            var submitButton = document.querySelector('.submit-btn');
+        
+            if (brand) {
+                this.classList.add('selected');
+                modelSelect.removeAttribute('disabled');
+                modelSelect.innerHTML = '<option value="">Select model</option>';
+        
+                // Dynamically populate models based on selected brand
+                carModels[brand]?.forEach(function(model) {
+                    modelSelect.innerHTML += `<option value="${model}">${model}</option>`;
+                });
+                modelSelect.innerHTML += '<option value="Other">Other</option>';
+            } else {
+                this.classList.remove('selected');
+                modelSelect.setAttribute('disabled', 'true');
+                yearSelect.setAttribute('disabled', 'true');
+                submitButton.setAttribute('disabled', 'true');
+            }
+        });
+        
+        document.getElementById('model').addEventListener('change', function() {
+            var model = this.value;
+            var yearSelect = document.getElementById('year');
+            var modelOther = document.getElementById('model-other');
+            var submitButton = document.querySelector('.submit-btn');
+            var brand = document.getElementById('brand').value;
+        
+            if (model) {
+                this.classList.add('selected');
+                if (model === 'Other') {
+                    modelOther.classList.remove('hidden');
+                    modelOther.addEventListener('input', function() {
+                        if (modelOther.value.trim()) {
+                            yearSelect.removeAttribute('disabled');
+                        } else {
+                            yearSelect.setAttribute('disabled', 'true');
+                        }
+                    });
+                } else {
+                    modelOther.classList.add('hidden');
+                    yearSelect.removeAttribute('disabled');
+                    yearSelect.innerHTML = '<option value="">Select first registration</option>';
+        
+                    // Dynamically populate years based on selected brand
+                    carYears[brand]?.forEach(function(year) {
+                        yearSelect.innerHTML += `<option value="${year}">${year}</option>`;
+                    });
+                    yearSelect.innerHTML += '<option value="Other">Other</option>';
+                }
+            } else {
+                this.classList.remove('selected');
+                yearSelect.setAttribute('disabled', 'true');
+                submitButton.setAttribute('disabled', 'true');
+            }
+        });
+        
+        document.getElementById('year').addEventListener('change', function() {
+            var year = this.value;
+            var yearOther = document.getElementById('year-other');
+            var submitButton = document.querySelector('.submit-btn');
+        
+            if (year) {
+                this.classList.add('selected');
+                if (year === 'Other') {
+                    yearOther.classList.remove('hidden');
+                    yearOther.addEventListener('input', function() {
+                        if (yearOther.value.trim()) {
+                            document.getElementById('shape-group').classList.remove('hidden');
+                        } else {
+                            document.getElementById('shape-group').classList.add('hidden');
+                        }
+                    });
+                } else {
+                    yearOther.classList.add('hidden');
+                    document.getElementById('shape-group').classList.remove('hidden');
+                }
+            } else {
+                this.classList.remove('selected');
+                document.getElementById('shape-group').classList.add('hidden');
+                submitButton.setAttribute('disabled', 'true');
+            }
+        });
+        
+        document.querySelectorAll('.option-box').forEach(function(box) {
+            box.addEventListener('click', function() {
+                var parentGroup = this.parentElement;
+                parentGroup.querySelectorAll('.option-box').forEach(function(option) {
+                    option.classList.remove('selected');
+                });
+                this.classList.add('selected');
+        
+                var otherInput = parentGroup.querySelector('input[type="text"]');
+                if (this.getAttribute('data-value') === 'Other') {
+                    otherInput.classList.remove('hidden');
+                    otherInput.addEventListener('input', function() {
+                        if (otherInput.value.trim()) {
+                            enableNextGroup(parentGroup);
+                        } else {
+                            disableNextGroup(parentGroup);
+                        }
+                    });
+                } else {
+                    otherInput.classList.add('hidden');
+                    enableNextGroup(parentGroup);
+                }
+            });
+        });
+        
+        function enableNextGroup(parentGroup) {
+            var currentGroup = parentGroup.id;
+            if (currentGroup === 'shape-group') {
+                document.getElementById('fuel-group').classList.remove('hidden');
+            } else if (currentGroup === 'fuel-group') {
+                document.getElementById('variant-group').classList.remove('hidden');
+            } else if (currentGroup === 'variant-group') {
+                document.getElementById('horsepower-group').classList.remove('hidden');
+            } else if (currentGroup === 'horsepower-group') {
+                document.getElementById('transmission-group').classList.remove('hidden');
+            } else if (currentGroup === 'transmission-group') {
+                document.getElementById('doors-group').classList.remove('hidden');
+            } else if (currentGroup === 'doors-group') {
+                document.getElementById('mileage-group').classList.remove('hidden');
+            }
+        }
+        
+        function disableNextGroup(parentGroup) {
+            var currentGroup = parentGroup.id;
+            if (currentGroup === 'shape-group') {
+                document.getElementById('fuel-group').classList.add('hidden');
+            } else if (currentGroup === 'fuel-group') {
+                document.getElementById('variant-group').classList.add('hidden');
+            } else if (currentGroup === 'variant-group') {
+                document.getElementById('horsepower-group').classList.add('hidden');
+            } else if (currentGroup === 'horsepower-group') {
+                document.getElementById('transmission-group').classList.add('hidden');
+            } else if (currentGroup === 'transmission-group') {
+                document.getElementById('doors-group').classList.add('hidden');
+            } else if (currentGroup === 'doors-group') {
+                document.getElementById('mileage-group').classList.add('hidden');
+            }
+        }
+        
+        document.getElementById('mileage').addEventListener('input', function() {
+            var mileage = this.value;
+            var additionalOptionsGroup = document.getElementById('additional-options-group');
+            var submitButton = document.querySelector('.submit-btn');
+            var uploadImageGroup = document.getElementById('upload-image-group');
+        
+            if (mileage) {
+                additionalOptionsGroup.classList.remove('hidden');
+                uploadImageGroup.classList.remove('hidden');
+                submitButton.removeAttribute('disabled');
+            } else {
+                additionalOptionsGroup.classList.add('hidden');
+                uploadImageGroup.classList.add('hidden');
+                submitButton.setAttribute('disabled', 'true');
+            }
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('car-review-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+        
+                const data = {
+                    brand: document.getElementById('brand').value,
+                    brand_other: document.getElementById('brand-other').value,
+                    model: document.getElementById('model').value !== 'Other' ? document.getElementById('model').value : document.getElementById('model-other').value,
+                    year: document.getElementById('year').value !== 'Other' ? document.getElementById('year').value : document.getElementById('year-other').value,
+                    shape: document.querySelector('#shape-group .option-box.selected')?.getAttribute('data-value') !== 'Other' ? document.querySelector('#shape-group .option-box.selected')?.getAttribute('data-value') : document.getElementById('shape-other').value,
+                    fuel: document.querySelector('#fuel-group .option-box.selected')?.getAttribute('data-value') !== 'Other' ? document.querySelector('#fuel-group .option-box.selected')?.getAttribute('data-value') : document.getElementById('fuel-other').value,
+                    variant: document.querySelector('#variant-group .option-box.selected')?.getAttribute('data-value') !== 'Other' ? document.querySelector('#variant-group .option-box.selected')?.getAttribute('data-value') : document.getElementById('variant-other').value,
+                    horsepower: document.querySelector('#horsepower-group .option-box.selected')?.getAttribute('data-value') !== 'Other' ? document.querySelector('#horsepower-group .option-box.selected')?.getAttribute('data-value') : document.getElementById('horsepower-other').value,
+                    transmission: document.querySelector('#transmission-group .option-box.selected')?.getAttribute('data-value') !== 'Other' ? document.querySelector('#transmission-group .option-box.selected')?.getAttribute('data-value') : document.getElementById('transmission-other').value,
+                    doors: document.querySelector('#doors-group .option-box.selected')?.getAttribute('data-value') !== 'Other' ? document.querySelector('#doors-group .option-box.selected')?.getAttribute('data-value') : document.getElementById('doors-other').value,
+                    mileage: document.getElementById('mileage').value,
+                    sell_plan: document.getElementById('sell-plan').value,
+                    prefer_to_sell: document.getElementById('prefer-to-sell').value,
+                    email: document.getElementById('email').value
+                };
+        
+
+            });
+        });
+        
+        </script>
+        
+
+
+
+    <script>
+        document.querySelectorAll('.purchase-options div').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.purchase-options div').forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.price-options div').forEach(price => {
+            price.addEventListener('click', function() {
+                document.querySelectorAll('.price-options div').forEach(pr => pr.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+    </script>
+
+    <script>
+        let lastScrollTop = 0;
+let isScrolling;
+const header = document.querySelector('header');
+const headerHeight = header.offsetHeight;
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop) {
+        header.style.top = `-${headerHeight}px`;
+        header.classList.remove('scrolling', 'static');
+    } else {
+        header.style.top = '0';
+        header.classList.add('scrolling');
+        header.classList.remove('static');
+    }
+    
+    lastScrollTop = Math.max(scrollTop, 0);
+    clearTimeout(isScrolling);
+
+    isScrolling = setTimeout(function() {
+        header.classList.remove('scrolling');
+        header.classList.add('static');
+    }, 200); 
+});
+
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.getElementById('nav-menu').classList.toggle('active');
+});
+    </script>
+
+
+
+<script src="Javascript\D.js"></script>
+
+
+</body>
