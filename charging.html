@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imgs\T.png">
+    <link rel="stylesheet" type="text/css" href="Css\charging.css">
+    <title>Tesla | Electric Cars</title>
+</head>
+
+
+
+
+
+<body>
+
+    <button id="carLicensePopupBtn" class="car-license-popup-button">License</button>
+<div id="carLicensePopupOverlay" class="car-license-popup-overlay">
+  <div class="car-license-popup-content">
+      <img src="imgs\3D Black.png" alt="Company Logo" class="car-license-popup-logo">
+      <h2>All rights reserved.</h2><br>
+      <p>This software is licensed under strict terms. Redistribution and use in source and binary forms, with or without modification, are strictly prohibited without express written permission from Chaudhary Abdul Rafay.</p><br>
+      <p>&copy; 2024 AbdulRafay Chaudhry. </p>
+      <button id="carLicenseCloseBtn" class="car-license-close-button">Close</button>
+  </div>
+</div>
+
+    <!---------------------------------------------------------------------SECTION-ONE---------------------------------------------------------------------------------->
+
+    <section class="one">
+        <header>
+            <nav>
+                <div class="nav-container">
+                    <img src="Icon/T Grey.png" id="logo">
+                    <button class="menu-toggle" id="menu-toggle">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <ul id="nav-menu">
+                        <li><a href="Product.html">Vehicle</a></li>
+                        <li><a href="Energy.html">Energy</a></li>
+                        <li><a href="Energy.html">Charging</a></li>
+                        <li><a href="about.html">Discover</a></li>
+                        <li><a href="Product.html">Shop</a></li>
+                    </ul>
+                    <div class="ico">
+                        <img src="Icon/HW.png" alt="" id="icon1">
+                        <img src="Icon/WW.png" alt="" id="icon2">
+                        <img src="Icon/AW.png" alt="" id="icon3">
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    <video autoplay loop muted playsinline class="bg-v "><source src="imgs\powerwall.avif" type="video/mp4"></video>
+
+
+<div class="portion">
+    <div class="home">
+
+        <p id="Y">Powerwall</p>
+        <p id="L">Whole-Home Backup, 24/7</p>
+
+    </div>
+
+
+    
+    <div class="bo">
+        <a href="Energy.html"><button type="button" id="shop">Shop Availble</button></a>
+        <a href=""><button type="button" id="demo">Demo Drive</button></a>
+    </div>
+    
+    <div class="pl">
+        <p id="lp">*Price before incentives and savings is $42,990, excluding taxes and fees. Subject to change.</p><br>
+        <a href=""><p id="ll"><u>Learn about est. gas savings.</u></p></a>
+    </div>
+</div>
+</section>
+
+
+
+<!---------------------------------------------------------------------SECTION-TWO---------------------------------------------------------------------------------->
+
+
+
+<!---------------------------------------------------------------------SECTION-THREE---------------------------------------------------------------------------------->
+
+
+
+<!--------------------------------------------------------------------Section-FOUR------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<script>
+
+let lastScrollTop = 0;
+let isScrolling;
+const header = document.querySelector('header');
+const headerHeight = header.offsetHeight;
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop) {
+  
+        header.style.top = `-${headerHeight}px`;
+        header.classList.remove('scrolling', 'static');
+    } else {
+
+        header.style.top = '0';
+        header.classList.add('scrolling');
+        header.classList.remove('static');
+    }
+    
+    lastScrollTop = Math.max(scrollTop, 0);
+    clearTimeout(isScrolling);
+
+    isScrolling = setTimeout(function() {
+
+        header.classList.remove('scrolling');
+        header.classList.add('static');
+    }, 200); 
+});
+</script>
+
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.getElementById('nav-menu').classList.toggle('active');
+});
+</script>
+
+<script src="Javascript\effect.js"></script>
+
+
+
+<footer>
+    <center>
+  <div class="footer-container">
+      <div class="footer-section">
+          <h4>About Us</h4>
+          <p>© 2024 Tesla, Inc. All rights reserved.</p>
+      </div>
+</center>
+</footer>
+
+
+</body>
+</html>
